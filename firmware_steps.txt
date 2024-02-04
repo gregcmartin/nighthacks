@@ -1,0 +1,60 @@
+I came across this post on the Netgear site and figured I would share it since this has been something I have been looking to do.
+
+
+https://community.netgear.com/t5/Mobile ... rue#M17374
+
+@Mrblazed wrote:
+
+Download the newest generic firmware from the Netgear support site for your country (the routers country).
+https://www.netgear.com/support/product ... 2.06.11.00
+
+Download FDT.exe version 4.6.2.0. (You’ll have to Google)
+https://www.dropbox.com/s/s27ftyfjpvn9819/fdt.exe?dl=0
+
+Download AC78x Netgear drivers version 4.3.00
+
+http://www.downloads.netgear.com/files/aircard/AC_790S_Telstra/AC78xSDrivers.exe
+
+Download Putty
+https://www.putty.org
+
+1) Put everything in the same folder (ex. C:\Desktop\mr1100 )
+2) Install drivers
+3) Connect MR1100 directly to computer with USB cable.
+There are 2 USB ports on the MR1100. Standard and Micro (micro is same port used for charging the MR1100).
+Use of the micro USB port for connecting the MR1100 to your PC.
+4) Open putty, telnet into MR1100 ip address (default is 192.168.1.1 which is no secret) with port 5510
+Note: normal telnet session prompts for login ID and password. You don't get that here, so just start typing the
+
+following command.
+5) AT!BOOTHOLD
+Once you type this command, you will get a response back just saying 'OK'. You should also see 'NetGear' boldly
+
+displayed on the MR1100,
+and the small status LED will be flashing red.
+6) Close Putty
+7) Open 'cmd' window, change directory prompt to where you downloaded everything to (ex
+
+C:/Desktop/mr1100). Type ”fdt.exe insertfilename.secc.spk” and hit enter.
+fdt.exe NTG9x50C_12.06.11.00.secc.spk
+8) Do not touch anything. If the command prompt tells you after “resetting device” that the upgrade failed, ignore it
+
+and let the MR1100 do its thing. The screen on the MR1100 may show its downloading the firmware, and at
+
+some point It may look like it’s frozen, but it should finish and boot by itself after about 10 minutes. Again as
+
+Mrblazed advised, DON'T MESS WITH IT UNTIL COMPLETELY DONE.
+
+9) When its done, the display on the MR1100 should look different, and have status info, usage amount...etc on
+
+the display.
+
+make sure you can page through the different displays on the screen using the 'home' button on the MR1100.
+
+You can also log into the MR1100, and navigate to Settings > Administration > Firmware Update... there you
+
+should see the new firmware version, which also confirms your MR1100 update was successful.
+
+------------------
+
+So after all said and done, I was still having issue with battery charging. The MR1100 would get to about 33% charge and then discontinue with overheat mode. I solved that issue very easily by shutting modem off for a couple of hours. I then tired a different trick by adding a cooling fan from AC Infinity that fits nicely between my router and the MR1100. It now registers a much cooler temp and will charge while the unit is being used. Only $13 on Amazon. Voila!!!
