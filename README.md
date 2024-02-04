@@ -7,11 +7,13 @@ challenge response tool: https://sierra-keygen.uu.sg/
 
 
 ---
-mr1100
-apn = fast.t-mobile.com
-type = "default,supl,mms,dun"
-ttl = 64
-modem type = MDM9x40
+<p>
+mr1100 <br>
+apn = fast.t-mobile.com <br>
+type = "default,supl,mms,dun" <br>
+ttl = 64 <br>
+modem type = MDM9x40 <br>
+</p>
 ---
 
 
